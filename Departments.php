@@ -58,11 +58,11 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="AboutUs.html">About</a></li>
-          <li><a class="nav-link scrollto" href="Services.html">Services</a></li>
+          <li><a class="nav-link scrollto " href="index.php">Home</a></li>
+          <li><a class="nav-link scrollto" href="AboutUs.php">About</a></li>
+          <li><a class="nav-link scrollto" href="Services.php">Services</a></li>
           <li><a class="nav-link scrollto" href="#departments">Departments</a></li>
-          <li><a class="nav-link scrollto" href="Doctors.html">Doctors</a></li>
+          <li><a class="nav-link scrollto" href="Doctors.php">Doctors</a></li>
           <li class="dropdown"><a href="#"><span>Health Sciences Schools</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="https://medicine.lau.edu.lb/">School of Medicine</a></li>
@@ -70,12 +70,12 @@
               <li><a href="https://nursing.lau.edu.lb/">School of Nursing</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="Contacts.html">Contact</a></li>
+          <li><a class="nav-link scrollto" href="Contacts.php">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="Services.html #appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
+      <a href="Services.php #appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
 
     </div>
   </header><!-- End Header -->
@@ -89,7 +89,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>Departments</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li>Departemnts</li>
           </ol>
         </div>
@@ -104,7 +104,7 @@
         <div class="section-title">
           <h2>Our Departments</h2>
           <p>LAU Medical Center – Rizk Hospital offers its patients and the community a wide range of medical, surgical and diagnostic healthcare services. As the affiliation with The Gilbert and Rose-Marie Chagoury School of Medicine evolves, and necessary resources are in place, the hospital will operate Clinical Centers of Excellence. LAU Medical Center – Rizk Hospital currently operates the following medical departments and divisions:
-            </p>
+          </p>
         </div>
 
         <div class="row gy-4">
@@ -200,7 +200,7 @@
                     <p>We also are looking into the Integration of OPD with outpatient subspecialty clinics that would include (Neurology, ADHD, Endocrinology, Gastroenterology, Obesity, and expansion of the pediatric emergency department).
                       In our Department, education is and always will be a major focus, providing interns, residents, fellow colleagues, and health care professionals the constant opportunity to learn.
                       At the Pediatrics Department in LAU Medical Center-Rizk Hospital, we aim at providing the best quality of care, not only to the children, but also to the family as a whole. Our well-coordinated, full service and multidisciplinary team, works with utmost professionalism and devotion. We are partners in your child’s health and well-being.</p>
-                    </div>
+                  </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="assets/img/departments-4.jpg" alt="" class="img-fluid">
                   </div>
@@ -269,12 +269,22 @@
             </ul>
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
+
+          <div class="col-lg-4 col-md-6 footer-newsletter" id="email">
             <h4>Join Our Mailing List and Stay Updated!</h4>
             <p>Enter your email address below and stay connected.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+            <form action="forms/subscribe.php" method="post">
+              <input type="email" name="email" required>
+              <input type="submit" value="Subscribe">
             </form>
+            <br>
+            <?php
+            if (isset($_GET["success"]) && $_GET["success"] === "true") {
+              echo "<p>Email successfully added to the mailing list!</p>";
+            } elseif (isset($_GET["success"]) && $_GET["success"] === "false") {
+              echo "<p>Email Failed to be stored!</p>";
+            }
+            ?>
           </div>
 
         </div>
@@ -302,7 +312,7 @@
         <a href="https://www.linkedin.com/company/laumcrh/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
-    </footer><!-- End Footer -->
+  </footer><!-- End Footer -->
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

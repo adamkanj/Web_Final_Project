@@ -58,10 +58,10 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="AboutUs.html">About</a></li>
-          <li><a class="nav-link scrollto" href="Services.html">Services</a></li>
-          <li><a class="nav-link scrollto" href="Departments.html">Departments</a></li>
+          <li><a class="nav-link scrollto " href="index.php">Home</a></li>
+          <li><a class="nav-link scrollto" href="AboutUs.php">About</a></li>
+          <li><a class="nav-link scrollto" href="Services.php">Services</a></li>
+          <li><a class="nav-link scrollto" href="Departments.php">Departments</a></li>
           <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
           <li class="dropdown"><a href="#"><span>Health Sciences Schools</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -70,12 +70,12 @@
               <li><a href="https://nursing.lau.edu.lb/">School of Nursing</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="Contacts.html">Contact</a></li>
+          <li><a class="nav-link scrollto" href="Contacts.php">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="Services.html #appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
+      <a href="Services.php #appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
 
     </div>
   </header><!-- End Header -->
@@ -89,7 +89,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>Doctors</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li>Doctors</li>
           </ol>
         </div>
@@ -286,12 +286,22 @@
             </ul>
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
+
+          <div class="col-lg-4 col-md-6 footer-newsletter" id="email">
             <h4>Join Our Mailing List and Stay Updated!</h4>
             <p>Enter your email address below and stay connected.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+            <form action="forms/subscribe.php" method="post">
+              <input type="email" name="email" required>
+              <input type="submit" value="Subscribe">
             </form>
+            <br>
+            <?php
+            if (isset($_GET["success"]) && $_GET["success"] === "true") {
+              echo "<p>Email successfully added to the mailing list!</p>";
+            } elseif (isset($_GET["success"]) && $_GET["success"] === "false") {
+              echo "<p>Email Failed to be stored!</p>";
+            }
+            ?>
           </div>
         </div>
       </div>
@@ -318,7 +328,7 @@
         <a href="https://www.linkedin.com/company/laumcrh/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
-    </footer><!-- End Footer -->
+  </footer><!-- End Footer -->
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

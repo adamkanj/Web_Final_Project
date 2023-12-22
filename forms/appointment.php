@@ -1,45 +1,38 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+// Database connection code (replace placeholders with actual database credentials)
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "webproj";
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+// Check if the form was submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Collect form data
+  $name = $_POST["name"];
+  $email = $_POST["email"];
+  $phone = $_POST["phone"];
+  $date = $_POST["date"];
+  $department = $_POST["department"];
+  $doctor = $_POST["doctor"];
+  $message = $_POST["message"];
+
+  // Prepare SQL query to insert data into appointments table
+  $sql = "INSERT INTO appointments (name, email, phone, date, department, doctor, message) VALUES ('$name', '$email', '$phone', '$date', '$department', '$doctor', '$message')";
+
+  // Execute SQL query
+  if ($conn->query($sql) === TRUE) {
+    header("Location: " . $_SERVER["HTTP_REFERER"] . "?Appsuccess=true");
   } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
+    header("Location: " . $_SERVER["HTTP_REFERER"] . "?Appsuccess=false");
   }
-
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = 'Online Appointment Form';
-
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
-
-  $contact->add_message( $_POST['name'], 'Name');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['phone'], 'Phone');
-  $contact->add_message( $_POST['date'], 'Appointment Date');
-  $contact->add_message( $_POST['department'], 'Department');
-  $contact->add_message( $_POST['doctor'], 'Doctor');
-  $contact->add_message( $_POST['message'], 'Message');
-
-  echo $contact->send();
+  $conn->close();
+}
 ?>
+// Close the database connection

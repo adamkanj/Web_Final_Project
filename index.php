@@ -56,10 +56,10 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="AboutUs.html">About</a></li>
-          <li><a class="nav-link scrollto" href="Services.html">Services</a></li>
-          <li><a class="nav-link scrollto" href="Departments.html">Departments</a></li>
-          <li><a class="nav-link scrollto" href="Doctors.html">Doctors</a></li>
+          <li><a class="nav-link scrollto" href="AboutUs.php">About</a></li>
+          <li><a class="nav-link scrollto" href="Services.php">Services</a></li>
+          <li><a class="nav-link scrollto" href="Departments.php">Departments</a></li>
+          <li><a class="nav-link scrollto" href="Doctors.php">Doctors</a></li>
           <li class="dropdown"><a href="#"><span>Health Sciences Schools</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="https://medicine.lau.edu.lb/">School of Medicine</a></li>
@@ -67,12 +67,12 @@
               <li><a href="https://nursing.lau.edu.lb/">School of Nursing</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="Contacts.html">Contact</a></li>
+          <li><a class="nav-link scrollto" href="Contacts.php">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="Services.html #appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
+      <a href="Services.php #appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
 
     </div>
   </header><!-- End Header -->
@@ -97,10 +97,10 @@
             <div class="content">
               <h3>Why Choose LAUMC?</h3>
               <p>
-                Choosing the right healthcare provider is pivotal for your well-being. 
+                Choosing the right healthcare provider is pivotal for your well-being.
                 At LAU Medical Center, we stand out as a beacon of quality care and patient-centered services.
-                 Our commitment to excellence is evident in our skilled team of healthcare professionals, cutting-edge technology, and personalized approach to healthcare. With a focus on compassion, innovation, and delivering exceptional medical care, we strive to exceed expectations. Experience the difference with us and entrust your health to a center dedicated to your overall wellness.
-                </p>
+                Our commitment to excellence is evident in our skilled team of healthcare professionals, cutting-edge technology, and personalized approach to healthcare. With a focus on compassion, innovation, and delivering exceptional medical care, we strive to exceed expectations. Experience the difference with us and entrust your health to a center dedicated to your overall wellness.
+              </p>
               <div class="text-center">
                 <a href="AboutUs.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
               </div>
@@ -137,7 +137,7 @@
 
       </div>
     </section><!-- End Why Us Section -->
-    
+
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
       <div class="container">
@@ -351,12 +351,21 @@
             </ul>
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
+          <div class="col-lg-4 col-md-6 footer-newsletter" id="email">
             <h4>Join Our Mailing List and Stay Updated!</h4>
             <p>Enter your email address below and stay connected.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+            <form action="forms/subscribe.php" method="post">
+              <input type="email" name="email" required>
+              <input type="submit" value="Subscribe">
             </form>
+            <br>
+            <?php
+            if (isset($_GET["success"]) && $_GET["success"] === "true") {
+              echo "<p>Email successfully added to the mailing list!</p>";
+            } elseif (isset($_GET["success"]) && $_GET["success"] === "false") {
+              echo "<p>Email Failed to be stored!</p>";
+            }
+            ?>
           </div>
 
         </div>
@@ -384,7 +393,7 @@
         <a href="https://www.linkedin.com/company/laumcrh/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
-    </footer><!-- End Footer -->
+  </footer><!-- End Footer -->
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

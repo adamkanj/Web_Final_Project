@@ -1,2 +1,1 @@
-Fully working PHP/AJAX contact form script is available in the pro version of the template.
-You can buy it from: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+this is full responsive website about a medical center with departments and doctors. it is provided with a database already created inside phpmyadmin. to access the admin portal you need to press on the logo name in the index page.

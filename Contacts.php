@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>LAUMC | About us</title>
+  <title>LAUMC | Contacts</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -24,7 +24,8 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <!--Stylesheet-->
+
+  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
@@ -57,11 +58,11 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="Services.html">Services</a></li>
-          <li><a class="nav-link scrollto" href="Departments.html">Departments</a></li>
-          <li><a class="nav-link scrollto" href="Doctors.html">Doctors</a></li>
+          <li><a class="nav-link scrollto " href="index.php">Home</a></li>
+          <li><a class="nav-link scrollto" href="AboutUs.php">About</a></li>
+          <li><a class="nav-link scrollto" href="Services.php">Services</a></li>
+          <li><a class="nav-link scrollto" href="Departments.php">Departments</a></li>
+          <li><a class="nav-link scrollto" href="Doctors.php">Doctors</a></li>
           <li class="dropdown"><a href="#"><span>Health Sciences Schools</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="https://medicine.lau.edu.lb/">School of Medicine</a></li>
@@ -69,12 +70,12 @@
               <li><a href="https://nursing.lau.edu.lb/">School of Nursing</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="Contacts.html">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="Services.html #appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
+      <a href="Services.php #appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
 
     </div>
   </header><!-- End Header -->
@@ -86,94 +87,96 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>About Us</h2>
+          <h2>Contacts</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>about us</li>
+            <li><a href="index.php">Home</a></li>
+            <li>Contact</li>
           </ol>
         </div>
 
       </div>
     </section><!-- End Breadcrumbs Section -->
 
-    <section style="padding-top: 0;" id="about" class="about">
-      <div class="container-fluid">
 
-        <div class="row">
-          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
-            <a href="https://www.youtube.com/watch?v=JJRaffEWkiE" class="glightbox play-btn mb-4"></a>
-          </div>
-
-          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-            <h3>All About LAU Medical Center</h3>
-            <p>Since 1925, the LAU Medical Center – Rizk Hospital has been dedicated to fostering and advancing the health of humankind. The hospital has evolved through its history in becoming more comprehensive with its services, facilities and offerings; continuously developing with the core purpose of humanizing medicine.</p>
-
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxs-heart"></i></div>
-              <h4 class="title"><a href="">Mission, Vision and Values</a></h4>
-              <p class="description">Committed to excellence in patient care while pursuing high-quality teaching, research and innovation. Our vision is to `Become a leading academic medical center in the region by providing innovative education and outstanding patient-centered care in close partnership with superior health professionals. We Value Reliability, Ethics, Sustainability, Professionalism, Excellence, Compassion, and Teamwork.</p>
-            </div>
-
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxs-flask"></i></div>
-              <h4 class="title"><a href="">Certified Lab</a></h4>
-              <p class="description">LAU Medical Center – Rizk Hospital is accredited by the Lebanese Ministry of Public Health (MOPH).
-                In 2002 LAU Medical Center – Rizk Hospital received its first accreditation from the Ministry of Public Health. Operating on a three-year accreditation cycle, the Hospital was reaccredited in 2005.</p>
-            </div>
-
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-atom"></i></div>
-              <h4 class="title"><a href="">Certification</a></h4>
-              <p class="description">In 2002, as Dr. Rizk Clinic, LAU Medical Center – Rizk Hospital was the first hospital in Lebanon awarded ISO 9001:2000 certification. This achievement was testimony to the hospital's commitment and usage of an innovative management system that emphasized Quality.</p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-    <section id="counts" class="counts">
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
       <div class="container">
 
-        <div class="row">
+        <div class="section-title">
+          <h2>Contact Us!</h2>
+          <p>At LAU Medical Center, we value open communication and are here to address your queries, concerns, or appointment needs. Our 'Contact Us' section serves as a direct line of connection between you and our dedicated team. Whether you wish to schedule an appointment, inquire about our services, or seek assistance, our contact information and inquiry form are readily available. Feel free to reach out, and our friendly staff will promptly assist you. Your well-being is our priority, and we're just a message or call away!</p>
+        </div>
+      </div>
 
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="fas fa-user-md"></i>
-              <span data-purecounter-start="0" data-purecounter-end="220" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Doctors</p>
+      <div>
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.1702689512326!2d35.51245807575987!3d33.885268426528576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f170247c61139%3A0xd9ea41e9cfc6011e!2sLAU%20Medical%20Center-Rizk%20Hospital!5e0!3m2!1sen!2sus!4v1702667867617!5m2!1sen!2sus" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="container">
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Zahar Street, Ashrafieh, Beirut, Lebanon </p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@laumcrh.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+961 1 200800</p>
+              </div>
+
             </div>
+
           </div>
 
-          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
-              <i class="far fa-hospital"></i>
-              <span data-purecounter-start="0" data-purecounter-end="13" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Departments</p>
-            </div>
-          </div>
+          <div class="col-lg-8 mt-5 mt-lg-0">
 
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="fas fa-flask"></i>
-              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Research Labs</p>
-            </div>
-          </div>
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+            <?php
+            if (isset($_GET["success"]) && $_GET["success"] === "true") {
+              echo "<p>Message successfully sent, we'll reachout ASAP!</p>";
+            } elseif (isset($_GET["success"]) && $_GET["success"] === "false") {
+              echo "<p>Message failed to send!</p>";
+            }
+            ?>
 
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="fas fa-award"></i>
-              <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Awards</p>
-            </div>
           </div>
 
         </div>
 
       </div>
-    </section><!-- End Counts Section -->
-
+    </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
 
@@ -217,14 +220,23 @@
             </ul>
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
+
+          <div class="col-lg-4 col-md-6 footer-newsletter" id="email">
             <h4>Join Our Mailing List and Stay Updated!</h4>
             <p>Enter your email address below and stay connected.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+            <form action="forms/subscribe.php" method="post">
+              <input type="email" name="email" required>
+              <input type="submit" value="Subscribe">
             </form>
+            <br>
+            <?php
+            if (isset($_GET["success"]) && $_GET["success"] === "true") {
+              echo "<p>Email successfully added to the mailing list!</p>";
+            } elseif (isset($_GET["success"]) && $_GET["success"] === "false") {
+              echo "<p>Email Failed to be stored!</p>";
+            }
+            ?>
           </div>
-
         </div>
       </div>
     </div>
@@ -250,7 +262,7 @@
         <a href="https://www.linkedin.com/company/laumcrh/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
-    </footer><!-- End Footer -->
+  </footer><!-- End Footer -->
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
