@@ -1,6 +1,1 @@
-Thanks for downloading this template!
-
-Template Name: Medilab
-Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+this is full responsive website about a medical center with departments and doctors. it is provided with a database already created inside phpmyadmin. to access the admin portal you need to press on the logo name in the index page.

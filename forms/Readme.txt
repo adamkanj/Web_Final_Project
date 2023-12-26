@@ -1,1 +1,2 @@
-this is full responsive website about a medical center with departments and doctors. it is provided with a database already created inside phpmyadmin. to access the admin portal you need to press on the logo name in the index page.
+here are the functionalities and how they interact with the database to retrieve or store information.
+but they are not secure queries you can use a better way to prevent sql injection attacks.
